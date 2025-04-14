@@ -3,13 +3,13 @@
 Implementirajte funkciju `logsumexp` koja se često koristi u statistici i strojnom učenju zbog numeričke stabilnosti:
 
 $$
-\text{logsumexp}(\bold{x}) = \log\left(\sum_{i=1}^n e^{x_i}\right)
+\text{logsumexp}(\vec{x}) = \log\left(\sum_{i=1}^n e^{x_i}\right)
 $$
 
 Radi numeričke stabilnosti, koristi se tzv. "trik s maksimumom":
 
 $$
-\text{logsumexp}(\bold{x}) = a + \log\left(\sum_{i=1}^n e^{x_i - a}\right), \quad a = \max(\bold{x})
+\text{logsumexp}(\vec{x}) = a + \log\left(\sum_{i=1}^n e^{x_i - a}\right), \quad a = \max(\vec{x})
 $$
 
 Implementirajte ovu funkciju pomoću NumPy-ja za ulazni vektor `x` i testirajte je na primjeru:
